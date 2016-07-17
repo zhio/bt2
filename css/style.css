@@ -1,6 +1,6 @@
 
 body{
-	background:#E6E6E6;
+	background:#ecf0f1;
 	padding-bottom: 70px; 
 	}
 .header{
@@ -10,8 +10,8 @@ body{
 #footer{
 	height:60px;
 	background:#FFFFFF;}	
-.active{
-	background:#2E4CFD;
+.active1{
+	background:#2980b9;
 	height:200px;}
 .pro{
 	margin-top: 10px;
@@ -134,8 +134,8 @@ body{
   margin: 1rem;
   padding: 0;
   text-transform: uppercase;
-  width: 115px;
-  height: 40px;
+  width: 40%;
+  height: 30px;
   padding:auto;
 }
 .btn1 .color-2 {
@@ -143,8 +143,8 @@ body{
 }
 .btn-border.color-2 {
   background-color: transparent;
-  border: 2px solid #00897b;
-  color: #00897b;
+  border: 2px solid #2980b9;
+  color: #2980b9;
 }
 .btn-round {
   border-radius: 10em;
@@ -158,4 +158,36 @@ body{
   position: absolute;
   top: 0;
   left: 0;
+}
+.shopping{
+	width:100%;
+	margin-top:10px;
+	background:#FFFFFF;
+}
+.shopping1{
+	height:50px;
+	background:#FFFFFF;
+	border-bottom:0.1px solid #CCC;
+	}
+.shopping2{
+	background:#FFFFFF;
+	margin:5px;
+	padding:10px 5px;
+	border-bottom:0.1px solid #CCC;
+	}
+.shopping5{
+	height:50px;
+	background:#FFFFFF;
+	border-bottom:0.1px solid #CCC;
+}
+.bstyle{
+	float:right;
+	padding:10px;}
+.shopping .mycard{
+	margin-top:0px;}
+.butt1{
+	float:left;
+}
+.butt2{
+	float:right;
 }
