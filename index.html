@@ -7,7 +7,10 @@
     <title>美天优鲜配商城</title>
     <link href="css/bootstrap.min.css" rel="stylesheet">
 	<link href="css/style.css" type="text/css" rel="stylesheet"/>
-    <style> 
+    <style>
+	.body{ 
+	    padding-top: 50px;
+	}
     .carousel{
 		height:150px;
 		background-color:#E8E6E6;
@@ -20,9 +23,16 @@
 		height:150px;
 		width:100%;}
  </style>
+ <script src="js/prefixfree.min.js"></script>
   </head>
   <body>
   	<div class="active">
+          <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+              <div class="container">
+                <button class="btn1 btn-border color-2 material-design" data-color="#004740">体验一次<canvas width="60" height="36" style="width: 100%; height: 100%;"></canvas></button>
+                <button class="btn1 btn-border color-2 material-design" data-color="#004740">包月订购<canvas width="60" height="36" style="width: 100%; height: 100%;"></canvas></button>
+              </div>
+          </nav>
    		 <div class="header"></div>
          <div class="ad">
               <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
@@ -66,8 +76,8 @@
                         ...
                       </div>
                       <div class="modal-footer">
-                        <button type="button" class="btn btn-default" data-dismiss="modal">不想买了</button>
-                        <button type="button" class="btn btn-primary">加入购物车</button>
+                        <button type="button" class="btn btn-default" data-dismiss="modal">买给自己</button>
+                        <button type="button" class="btn btn-primary">买给TA</button>
                       </div>
    		 	</div>
   			</div>
@@ -101,8 +111,8 @@
                         </div>
                       </div>
                       <div class="modal-footer">
-                        <button type="button" class="btn btn-default" data-dismiss="modal">不想买了</button>
-                        <button type="button" class="btn btn-primary">加入购物车</button>
+                        <button type="button" class="btn btn-default" data-dismiss="modal">买给自己</button>
+                        <button type="button" class="btn btn-primary">买给TA</button>
                       </div>
    		 	</div>
   			</div>
@@ -123,6 +133,14 @@
     <script src="js/jquery-3.1.0.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="js/bootstrap.min.js"></script>
-	<script src="js/main.js"></script>
+    <script src="js/index.js"></script>
+    <script src="js/jquery.bootstrap-autohidingnavbar.min.js"></script>
+
+    <script>
+    $(".navbar-fixed-top").autoHidingNavbar({
+
+    });
+    </script>
+    
    </body>
 </html>
