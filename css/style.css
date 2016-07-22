@@ -13,7 +13,7 @@ body{
 .active1{
 	background:#2980b9;
 	height:200px;}
-.pro{
+.product{
 	margin-top: 10px;
 	background:#FFFFFF;
 	border-bottom:0.1px solid #CCC;
@@ -159,23 +159,23 @@ body{
   top: 0;
   left: 0;
 }
-.shopping{
+.orders{
 	width:100%;
 	margin-top:10px;
 	background:#FFFFFF;
 }
-.shopping1{
+.orders1{
 	height:50px;
 	background:#FFFFFF;
 	border-bottom:0.1px solid #CCC;
 	}
-.shopping2{
+.orders2{
 	background:#FFFFFF;
-	margin:5px;
+	width:100%;
 	padding:10px 5px;
 	border-bottom:0.1px solid #CCC;
 	}
-.shopping5{
+.orders_box{
 	height:50px;
 	background:#FFFFFF;
 	border-bottom:0.1px solid #CCC;
@@ -183,11 +183,23 @@ body{
 .bstyle{
 	float:right;
 	padding:10px;}
-.shopping .mycard{
+.orders .mycard{
 	margin-top:0px;}
-.butt1{
-	float:left;
-}
-.butt2{
-	float:right;
-}
+
+a{ color:#555; text-decoration:none;}
+a:hover{ color:#c00; text-decoration:underline;}
+li{list-style-type:none}
+.iteminfo_price{ color:#c00; font-size:14px; font-family:Arial, Helvetica, sans-serif;margin-right:20px;}
+.sys_item_price{ color:#c00; font-size:22px; vertical-align:right;;}.sys_spec_text{}
+#tishi{float:left;margin-top:2px}
+#target_list {float:left;margin:0}
+#target_list li{ float:left; height:28px; position:relative; margin:2px 6px 2px 0; outline:none;}
+#target_list li a{  padding:1px 6px; border:1px solid #ccc; background:#fff; display:inline-block;}
+#target_list li a:hover{ border:2px solid #e4393c; padding:0 5px; text-decoration:none;}
+#target_list li i{ position:absolute; width:10px; height:10px; font-size:0; line-height:0; right:2px; bottom:2px; background:url(../img/sys_item_selected.gif) no-repeat right bottom; z-index:99; display:none;}
+#target_list li.selected a { border:2px solid #e4393c; padding:1px 6px;text-decoration:none;}
+#target_list li.selected i { display:block;}
+.clearfix:after {visibility: hidden;display: block;font-size: 0;content: " ";clear: both;height: 0;}
+.iteminfo_parameter{ padding:8px 0; padding-left:20px;}
+.sys_item_spec .iteminfo_parameter{ padding-top:5px; padding-bottom:5px;border-bottom:0.11px solid  #CCC}
+.sys_item_spec .iteminfo_parameter dt{ line-height:32px;}

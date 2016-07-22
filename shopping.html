@@ -9,16 +9,16 @@
 	<link href="css/style.css" type="text/css" rel="stylesheet"/>
 </head>
   <body>
-  <div class="shopping">
-  	<div class="shopping2">
+  <div class="orders">
+  	<div class="orders2">
     <h4><strong>账单详情</strong></h4></div>
-    <div class="shopping2">
+    <div class="orders2">
        <div class="container-fluid">
           <div class="row ">
             <div class="col-xs-5 ">
                 <a href="#" ><img src="img/cp02.jpg" class="img-responsive" alt="Responsive image"></a>
             </div>
-            <div class="col-xs-7 ">
+            <div id="pro_detail" class="col-xs-7 ">
                 <p class="text-right text-primary">沁爽柠檬三三倍酸奶</p>
                 <h6 class="text-right text-primary">夏日美白神器</h6>
                 <h6 class="text-right text-danger">￥16/盒</h6>
@@ -29,11 +29,23 @@
         </div>
       </div>            
     </div>
+
+    <div class="sys_item_spec">
+        <div class="clearfix iteminfo_parameter sys_item_specpara" data-sid="2">
+            <div id="tishi">购买方式</div>
+           
+                <ul id="target_list">
+                    <li data-aid="13"><a href="javascript:;" title="s">送给TA</a><i></i></li>
+                    <li data-aid="14"><a href="javascript:;" title="M">买给自己</a><i></i></li>
+                </ul>
+        </div>
+     </div>
+
     <div class="mycard">
-    	<a class="slide-link" href="#">
+    	 <a class="slide-link" href="#">
                    <img src="img/youhuijuan.png">
                    我的优惠券          <em>1张</em>
-        </a>
+         </a>
     </div>
     <div class="mycard">
                   <a class="slide-link" href="#">
@@ -41,10 +53,10 @@
                    自提点选择：            
                   </a>
      </div>
-    <div class="shopping2">
-    	<h5 class="text-right text-danger">总计：16.00元</h5>
+    <div class="orders2">
+    	  <p class="iteminfo_price text-right">合计： <b class="sys_item_price ">6.80</b>元</p>
     </div>
-    <div class="shopping5">
+    <div class="orders_box">
     	<div class="bstyle">
         	<button type="button" class="btn btn-default">删除订单</button>
     		<button type="button" class="btn btn-danger">提交订单</button>
@@ -55,17 +67,40 @@
     	<div class="container">
             <div class="row">
                 <div class="col-xs-4">
-                <a href="index.html"><img src="img/icon-home01.png" class="img-responsive center-block imgh" alt="Responsive image"></a>
+                    <a href="index.html"><img src="img/icon-home01.png" class="img-responsive center-block imgh" alt="Responsive image"></a>
                 </div>
-                <div class="col-xs-4"><a href="personal.html"><img src="img/icon-me.png" class="img-responsive center-block" alt="Responsive image"></a></div>
-                <div class="col-xs-4"><img src="img/icon-cart.png" class="img-responsive center-block" alt="Responsive image"></div>
-          </div>
-    </div>
- 	</nav>
+                <div class="col-xs-4">
+                    <a href="personal.html"><img src="img/icon-me.png" class="img-responsive center-block" alt="Responsive image"></a>
+                </div>
+                <div class="col-xs-4">
+                    <img src="img/icon-cart.png" class="img-responsive center-block" alt="Responsive image">
+                </div>
+         	</div>
+    	</div>
+</nav>
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="js/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="js/bootstrap.min.js"></script>
-	<script src="js/main.js"></script>
+        <script>
+		var array = [{name:'milk',abstract:'##########',price:'15'},{name:'leben',abstract:'+++++++++++',price:'16'}]
+		for(i= 0; i < 2; i++) {
+		$('.product:eq('+i+')').click(function() {
+			
+			$("#pro_detail p").text(array[i].name)
+			$("#pro_detail h6").text(array[i].abstract)
+			$("#pro_detail h6:last").text(array[i].price)
+		})}	
+	</script>
+	<script> 
+
+		$('#target_list li').click(function(){
+			if(!!$(this).hasClass("selected")){
+				$(this).removeClass("selected");
+			}else{
+				$(this).addClass("selected").siblings("li").removeClass("selected");
+			}
+		})
+	</script>
   </body>
 </html>

@@ -1,4 +1,9 @@
-<!DOCTYPE html>
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>测试</title>
+</head><!DOCTYPE html>
 <html lang="zh-CN">
   <head>
     <meta charset="utf-8">
@@ -7,7 +12,6 @@
     <title>美天优鲜配商城</title>
     <link href="css/bootstrap.min.css" rel="stylesheet">
 	<link href="css/style.css" type="text/css" rel="stylesheet"/>
-    <link rel="stylesheet" href="css/jquery-labelauty.css">
     <style>
 	.body{ 
 	    padding-top: 50px;
@@ -23,21 +27,17 @@
 	.carousel img{
 		height:150px;
 		width:100%;}
-	ul { list-style-type: none;}
-	li { display: inline-block;}
-	li { margin: 10px 0;}
-	input.labelauty + label { font: 12px "Microsoft Yahei";}
-	</style>
-<!-- <script src="js/prefixfree.min.js"></script>-->
+ </style>
+ <script src="js/prefixfree.min.js"></script>
   </head>
   <body>
   	<div class="active">
           <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
               <div class="container">
-              	<center>
-               	<li><input type="radio" name="radio" value="0" data-labelauty="体验一次"></li>
-                <li><input type="radio" name="radio" value="1" data-labelauty="包月订购"></li>
-          		</center>
+              
+                <button class="butt1 btn1 btn-border color-2 material-design" name="tape" data-color="#3498db">体验一次<canvas width="60" height="36" style="width: 100%; height: 100%; margin:auto;"></canvas></button>
+                <button class="butt2 btn1 btn-border color-2 material-design" name="tape" data-color="#3498db">包月订购<canvas width="60" height="36" style="width: 100%; height: 100%;"></canvas></button>
+          
              </div>
           </nav>
    		 <div class="header"></div>
@@ -67,9 +67,9 @@
                 <img src="img/test10.jpg" width="100%" height="100%">
             </div>
        </div>
-        <div class="product" data-toggle="modal" data-target=".modal01" >
+        <div  class="product" data-toggle="modal" data-target=".modal01" >
              <div class="pro1">
-                <img src="img/test01.jpg" width="100%" height="100%">
+                <img src="img/test3.jpg" width="100%" height="100%">
             </div>
 		</div>
         <div class="modal fade modal01" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
@@ -95,18 +95,47 @@
                         </div>
                       </div>
                       <div class="modal-footer">
-                          	<a href="shopping.html" class="btn btn-success active" role="button">我不买了</a>
-                            <a href="shopping.html" class="btn btn-info active" role="button">立即购买</a>
+                            <a href="shopping.html" class="btn btn-success active" role="button">买给自己</a>
+                            <a href="shopping.html" class="btn btn-info active" role="button">买给TA</a>
                       </div>
    		 	</div>
   			</div>
-		
 		</div>
-       <div class="product" data-toggle="modal" data-target=".modal01">
+
+       <div  class="product" data-toggle="modal" data-target=".modal01">
             <div class="pro1">
-                <img src="img/test02.jpg" width="100%" height="100%">
+                <img src="img/test2.jpg" width="100%" height="100%">
             </div>
        </div>
+<!--           <div class="modal fade modal02" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel1">
+  			<div class="modal-dialog modal-lg">
+    		<div class="modal-content">
+      			<div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        <h4 class="modal-title" id="gridSystemModalLabel1">产品详情</h4>
+                      </div>
+                      <div class="modal-body">
+                         <div class="container-fluid">
+                            <div class="row ">
+                              <div class="col-xs-5 ">
+                                  <a href="#" ><img src="img/cp02.jpg" class="img-responsive" alt="Responsive image"></a>
+                              </div>
+                              <div class="col-xs-7 ">
+                                  <p class="text-right text-primary">沁爽柠檬三三倍酸奶</p>
+                                  <h6 class="text-right text-primary">夏日美白神器</h6>
+                                  <h6 class="text-right text-danger">￥16/盒</h6><div class="lt-rt">
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="modal-footer">
+							<a href="shopping.html" class="btn btn-default active" role="button">买给自己</a>
+                            <a href="shopping.html" class="btn btn-primary active" role="button">买给TA</a>
+                      </div>
+   		 	</div>
+  			</div>
+		</div>-->
   	<nav id="footer" class="navbar navbar-default navbar-fixed-bottom">
     	<div class="container">
             <div class="row">
@@ -120,47 +149,41 @@
     	</div>
  	</nav>
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="js/jquery.min.js"></script>
+    <script src="js/jquery-3.1.0.min.js"></script>
+    <script>
+		var dic = new Array();     
+        dic[0] = "这是一个好酸奶";
+        dic[1] = "这不是一个好酸奶";
+        dic[2] = "##########";
+        dic[3] = "￥15元";
+		dic[4] = "￥16元"
+	var i=0;
+	$('.product:eq('+i+')').click(function() {
+        $(".modal-body p").text(dic[0])
+		$(".modal-body h6").text(dic[1])
+		$(".modal-body h6:last").text(dic[2])
+	})
+	
+	$('.product:eq(1)').click(function() {
+        $(".modal-body p").text(dic[0])
+		$(".modal-body h6").text(dic[0])
+		$(".modal-body h6:last").text(dic[0])
+	})
+	</script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="js/bootstrap.min.js"></script>
-    <!--<script src="js/index.js"></script>-->
+    <script src="js/index.js"></script>
     <script src="js/jquery.bootstrap-autohidingnavbar.min.js"></script>
-    <script src="js/jquery-labelauty.js"></script>
-	<script>
-    $(function(){
-        $(':input').labelauty();
-    });
-    </script>
+
     <script>
     $(".navbar-fixed-top").autoHidingNavbar({
+
     });
     </script>
-    <script>
-		var dic ={name:'milk',abstract:'##########',price:'15'};
-		var dic2 ={name:'leben',abstract:'+++++++++++',price:'16'}
-
-		var i=0;
-		$('.product:eq(0)').click(function() {
-			
-			$(".modal-body p").text(dic.name)
-			$(".modal-body h6").text(dic.abstract)
-			$(".modal-body h6:last").text(dic.price)
-		})
-		$('.product:eq(1)').click(function() {
-			
-			$(".modal-body p").text(dic2.name)
-			$(".modal-body h6").text(dic2.abstract)
-			$(".modal-body h6:last").text(dic2.price)
-		})
-
-		 $(".product").on('click', function() {
-			  $("?").append( $(this).clone() )
-		  })
-		 $(".modal-footer").on('click', function() {
-	        $("#pro_detail").replaceWith('<a style="color:red">############</a>')
-	    })
-		
-	</script>
     
    </body>
+</html>
+
+<body>
+</body>
 </html>
