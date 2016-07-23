@@ -1,28 +1,37 @@
 
 body{
 	background:#ecf0f1;
-	padding-bottom: 70px; 
+	padding-bottom:70px; 
 	}
-.header{
-	background:#1EE159;
-	height:50px;
-	}
+.ad{
+    position:fixed;
+	top:61px;
+	background:#ecf0f1;
+	height:156px;
+	padding-bottom:2px;}
 #footer{
 	height:60px;
 	background:#FFFFFF;}	
 .active1{
 	background:#2980b9;
 	height:200px;}
+.product_first{
+	margin-top: 10px;
+	background:#FFFFFF;
+	border-bottom:0.1px solid #CCC;
+	}
 .product{
 	margin-top: 10px;
 	background:#FFFFFF;
 	border-bottom:0.1px solid #CCC;
 	}
-.pro1{
+.product_1{
 	padding:10px;
-
 }
-
+.top_menu
+{
+	padding:0px 10px;
+}
 .main{
 	background:#FFF;
 	width:100%;

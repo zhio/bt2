@@ -9,8 +9,8 @@
 	<link href="css/style.css" type="text/css" rel="stylesheet"/>
     <link rel="stylesheet" href="css/jquery-labelauty.css">
     <style>
-	.body{ 
-	    padding-top: 50px;
+	body{ 
+	    padding-top:212px;
 	}
     .carousel{#ecf0f1
 		height:150px;
@@ -35,13 +35,13 @@
           <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
               <div class="container">
               	<center>
-               	<li><input type="radio" name="radio" value="0" data-labelauty="体验一次"></li>
-                <li><input type="radio" name="radio" value="1" data-labelauty="包月订购"></li>
+               	<li class="top_menu"><input type="radio" name="radio" value="0" data-labelauty="体验一次"></li>
+                <li class="top_menu"><input type="radio" name="radio" value="1" data-labelauty="包月订购"></li>
           		</center>
              </div>
           </nav>
-   		 <div class="header"></div>
-         <div class="ad">
+      </div>
+         <div id="roll" class="ad">
               <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
                   <ol class="carousel-indicators">
                       <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
@@ -61,14 +61,13 @@
                   </div>
               </div>
           </div>
-       </div>
-       <div class="pro">
-            <div class="pro1">
+       <div class="product_first">
+            <div class="product_1">
                 <img src="img/test10.jpg" width="100%" height="100%">
             </div>
        </div>
         <div class="product" data-toggle="modal" data-target=".modal01" >
-             <div class="pro1">
+             <div class="product_1">
                 <img src="img/test01.jpg" width="100%" height="100%">
             </div>
 		</div>
@@ -86,7 +85,7 @@
                                   <a href="#" ><img src="img/cp02.jpg" class="img-responsive" alt="Responsive image"></a>
                               </div>
                               <div class="col-xs-7 ">
-                                  <p class="text-right text-primary">沁爽柠檬三三倍酸奶</p>
+                                  <p class="text-right text-primary" id="product-name">沁爽柠檬三三倍酸奶</p>
                                   <h6 class="text-right text-primary">夏日美白神器</h6>
                                   <h6 class="text-right text-danger">￥16/盒</h6><div class="lt-rt">
                               </div>
@@ -100,10 +99,9 @@
                       </div>
    		 	</div>
   			</div>
-		
 		</div>
        <div class="product" data-toggle="modal" data-target=".modal01">
-            <div class="pro1">
+            <div class="product_1">
                 <img src="img/test02.jpg" width="100%" height="100%">
             </div>
        </div>
@@ -123,7 +121,6 @@
     <script src="js/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="js/bootstrap.min.js"></script>
-    <!--<script src="js/index.js"></script>-->
     <script src="js/jquery.bootstrap-autohidingnavbar.min.js"></script>
     <script src="js/jquery-labelauty.js"></script>
 	<script>
@@ -132,35 +129,47 @@
     });
     </script>
     <script>
-    $(".navbar-fixed-top").autoHidingNavbar({
-    });
-    </script>
-    <script>
-		var dic ={name:'milk',abstract:'##########',price:'15'};
-		var dic2 ={name:'leben',abstract:'+++++++++++',price:'16'}
-
-		var i=0;
-		$('.product:eq(0)').click(function() {
+		$(document).ready(function(){
 			
-			$(".modal-body p").text(dic.name)
-			$(".modal-body h6").text(dic.abstract)
-			$(".modal-body h6:last").text(dic.price)
-		})
-		$('.product:eq(1)').click(function() {
+			var dic =[{name:'milk',abstract:'##########',price:'15'},{name:'leben',abstract:'+++++++++++',price:'16'}]	
+			$('.product').click(function() {
+				
+				index = $(this).index('.product')
+				$(".modal-body .product-name").text(dic[index].name)
+				$(".modal-body h6").text(dic[index].abstract)
+				$(".modal-body h6:last").text(dic[index].price)
+			})
+				
+			//var jWindow = $(window);
 			
-			$(".modal-body p").text(dic2.name)
-			$(".modal-body h6").text(dic2.abstract)
-			$(".modal-body h6:last").text(dic2.price)
-		})
+			$(window).scroll(function(){
 
-		 $(".product").on('click', function() {
-			  $("?").append( $(this).clone() )
-		  })
-		 $(".modal-footer").on('click', function() {
-	        $("#pro_detail").replaceWith('<a style="color:red">############</a>')
-	    })
-		
+				var scrollHeight = $(this).scrollTop();
+				//console.log(scrollHeight)
+				if(scrollHeight>120){
+					$('#roll').slideUp(500)
+					
+				}
+				else{
+					$('#roll').slideDown(500)
+				}
+			})
+			
+/*	   		$(window).scroll(function(){
+	   		var scrollHeight = jWindow.scrollTop();
+			var sideHergth = $('#roll').heigth();
+			if(scrollTop>40px){
+				$('#roll').slideUp(300)
+				}
+			else{
+				$('#roll')..slideDown(300)
+				}
+	  		 })*/
+		})
 	</script>
-    
+    <script>
+
+		
+    </script>
    </body>
 </html>
