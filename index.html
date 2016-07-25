@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="css/jquery-labelauty.css">
     <style>
 	body{ 
-	    padding-top:212px;
+	    padding-top:61px;
 	}
     .carousel{#ecf0f1
 		height:150px;
@@ -61,6 +61,7 @@
                   </div>
               </div>
           </div>
+        <div id="mainMenuBarAnchor"></div>
        <div class="product_first">
             <div class="product_1">
                 <img src="img/test10.jpg" width="100%" height="100%">
@@ -105,6 +106,11 @@
                 <img src="img/test02.jpg" width="100%" height="100%">
             </div>
        </div>
+        <div class="product" data-toggle="modal" data-target=".modal01">
+            <div class="product_1">
+                <img src="img/test02.jpg" width="100%" height="100%">
+            </div>
+       </div>
   	<nav id="footer" class="navbar navbar-default navbar-fixed-bottom">
     	<div class="container">
             <div class="row">
@@ -142,34 +148,43 @@
 				
 			//var jWindow = $(window);
 			
-			$(window).scroll(function(){
+/*			$(window).scroll(function(){
 
 				var scrollHeight = $(this).scrollTop();
 				//console.log(scrollHeight)
 				if(scrollHeight>120){
-					$('#roll').slideUp(500)
-					
+					$('#roll').slideUp(300)
 				}
 				else{
-					$('#roll').slideDown(500)
+					$('#roll').slideDown(300)
 				}
-			})
-			
-/*	   		$(window).scroll(function(){
-	   		var scrollHeight = jWindow.scrollTop();
-			var sideHergth = $('#roll').heigth();
-			if(scrollTop>40px){
-				$('#roll').slideUp(300)
-				}
-			else{
-				$('#roll')..slideDown(300)
-				}
-	  		 })*/
-		})
+			})*/
 	</script>
+    
     <script>
 
-		
+		$(document).ready(function() {
+          // Cache selectors for faster performance.
+          var $window = $(window),
+              $mainMenuBar = $('.product_first'),
+              $mainMenuBarAnchor = $('#mainMenuBarAnchor');
+       
+          // Run this on scroll events.
+          $window.scroll(function() {
+              var window_top = $window.scrollTop();
+              var div_top = $mainMenuBarAnchor.offset().top;
+              if (window_top > div_top) {
+                  // Make the div sticky.
+                  $mainMenuBar.addClass('stick');
+                  $mainMenuBarAnchor.height($mainMenuBar.height());
+              }
+              else {
+                  // Unstick the div.
+                  $mainMenuBar.removeClass('stick');
+                  $mainMenuBarAnchor.height(0);
+              }
+          });
+      });
     </script>
    </body>
 </html>

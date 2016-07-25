@@ -4,11 +4,15 @@ body{
 	padding-bottom:70px; 
 	}
 .ad{
-    position:fixed;
-	top:61px;
+/*    position:fixed;
+	top:61px;*/
 	background:#ecf0f1;
 	height:156px;
 	padding-bottom:2px;}
+.stick{
+		margin-top: 0;
+	    position: fixed;
+        top: 61px;}
 #footer{
 	height:60px;
 	background:#FFFFFF;}	
