@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>美天优鲜配</title>
+
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/Myorder.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/bellows.css">
+	<link rel="stylesheet" href="css/bellows-theme.css">
+	<link rel="stylesheet" href="css/lrtk.css">
+  	<style>
+	.navbar{
+		background:#FDFDFD;
+		}	
+	</style> 
+  </head>
+  <body>
+ 	<div class="bellows single">
+	<div class="bellows__item">
+		<div class="bellows__header">
+			<h5>正进行</h5>
+		</div>
+		<div class="bellows__content">
+			 <div id="order1" class="order-card product_1 " data-toggle="modal" data-target=".modal01" style="transform: rotate(-3deg);">
+                <p class="slide-link">订单号:<span id="order-id">123456789 </span>             <em id="order_data">2016-7-25</em></p>
+                <hr/>
+                <div class="order-card-body">
+                      <p>这是什么奶</p>
+                      <p>某某某</p>
+                      <p>兰州市安宁区西北师范大学</p>
+				</div>
+            </div>
+			 <div class="order-card product_1 " data-toggle="modal" data-target=".modal01" style="transform: rotate(3deg);">
+                <p class="slide-link">订单号:123456789              <em>2016-7-25</em></p>
+                <hr/>
+                <div class="order-card-body">
+                      <p>这是什么奶</p>
+                      <p>某某某</p>
+                      <p>兰州市安宁区西北师范大学</p>
+				</div>
+            </div>
+		</div>
+	</div>
+	<div class="bellows__item">
+		<div class="bellows__header">
+			<h5>待继续</h5>
+		</div>
+		<div id="wait" class="bellows__content">
+			<img src="img/我不饿.jpg" width="100%" height="100%">
+		</div>
+	</div>
+	<div class="bellows__item">
+		<div class="bellows__header">
+			<h5>待付款</h5>
+		</div>
+		<div class="bellows__content">
+			<img src="img/不正常订单.jpg" width="100%" height="100%">
+		</div>
+	</div>
+	<div class="bellows__item">
+		<div class="bellows__header">
+			<h5>已完成</h5>
+		</div>
+		<div class="bellows__content">
+			<img src="img/这是个啥.jpg" width="100%" height="100%">
+		</div>
+	</div> 
+    <img src="img/7b43c06ed2916f50060d939fedeaeb4fbfbf138cace7-XvmX5b_fw658.png" height="250px" width="100%">
+	</div>
+    <div class="modal fade modal01" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+  			<div class="modal-dialog modal-lg">
+    		<div class="modal-content">
+      			<div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        <h4 class="modal-title" id="gridSystemModalLabel">订单详情</h4>
+                      </div>
+                      <div class="modal-body">
+                       	<p id="product-name">##########</p>
+                        <p id="product-type">##########</p>
+                        <p id="product-data">日期:</p>
+                        <p id="product-person">订奶人:###</p>
+                        <p id="product-site">取奶点:##############</p>
+                      </div>
+                      <div class="modal-footer">
+                      		<a href="address.html" class="btn btn-success active " role="button">修改订单</a>
+                            <a href="#" id="suspend" class="btn btn-info active " data-dismiss="modal" role="button">暂停订单</a>
+                      </div>
+   		 	</div>
+  			</div>
+		</div>
+  	<nav id="footer" class="navbar navbar-default navbar-fixed-bottom ">
+    	<div class="container">
+            <div class="row">
+                <div class="col-xs-4">
+                <a href="index.html"><img src="img/icon-home01.png" class="img-responsive center-block imgh" alt="Responsive image"></a>
+                </div>
+                <div class="col-xs-4"><img src="img/icon-me.png" class="img-responsive center-block" alt="Responsive image"></div>
+                <div class="col-xs-4"><a href="shopping.html"><img src="img/icon-cart.png" class="img-responsive center-block" alt="Responsive image"></a></div>
+            </div>
+    	</div>
+ 	</nav>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="js/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.min.js"></script>
+	<script src="js/velocity.min.js"></script>
+<!-- Include bellows.js -->
+	<script src="js/bellows.min.js"></script>
+<!-- Construct Bellows -->
+	<script>
+	$('.bellows').bellows({
+	  singleItemOpen: true,
+	  easing: 'ease-in-out',
+	   duration: 600
+	})
+</script>
+<script>
+		$(document).ready(function() {
+          // Cache selectors for faster performance.
+          	var dic =[{product_id:'12345678',order_data:'2016/7/26',name:'milk',price:'15',person:'XXX',site:'甘肃省兰州市安宁区'},{product_id:'12345670',order_data:'2016/7/27',name:'leben',price:'16',person:'HHH',site:'甘肃省兰州市城关区'}]	
+			$('.order-card').click(function() {
+				
+				index = $(this).index('.order-card')
+				$(".modal-body #product-name").text(dic[index].name)
+				$(".modal-body #product-type").text(dic[index].product_id)
+				$(".modal-body #product-data").text(dic[index].order_data)
+				$(".modal-body #product-person").text(dic[index].person)
+				$(".modal-body #product-site").text(dic[index].site)
+				
+			})
+			$('#suspend').click(function() {
+				    $("#wait").replaceWith($("#order1"))
+					$("#wait").append($("#order1"))
+			})
+		})
+</script>
+  </body>
+</html>

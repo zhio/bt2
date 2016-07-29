@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>美天优鲜配商城</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="css/address-style.css" />
+   	<link href="css/style.css" type="text/css" rel="stylesheet"/>
+	<script src="js/jquery.min.js"></script>
+</head>
+<body>
+<div class="orders">
+    <div class="form-group has-error">
+      <label class="control-label" for="inputSuccess1">请输入收货人姓名</label>
+      <input type="text" class="form-control" id="inputSuccess1">
+       <label class="control-label" for="inputSuccess1">请选择订购天数</label>
+      <input type="text" class="form-control" id="inputSuccess2">
+      <label class="control-label" for="inputSuccess1">请选择一周内订购日期</label>
+      </div>
+      <label class="checkbox-inline">
+        <input type="checkbox" id="inlineCheckbox1" value="option1"> 日
+      </label>
+      <label class="checkbox-inline">
+        <input type="checkbox" id="inlineCheckbox2" value="option2"> 一
+      </label>
+      <label class="checkbox-inline">
+        <input type="checkbox" id="inlineCheckbox3" value="option3"> 二
+      </label>
+      <label class="checkbox-inline">
+        <input type="checkbox" id="inlineCheckbox1" value="option1"> 三
+      </label>
+      <label class="checkbox-inline">
+        <input type="checkbox" id="inlineCheckbox2" value="option2"> 四
+      </label>
+      <label class="checkbox-inline">
+        <input type="checkbox" id="inlineCheckbox3" value="option3"> 五
+      </label>
+      <label class="checkbox-inline">
+        <input type="checkbox" id="inlineCheckbox3" value="option3"> 六
+      </label>
+    
+
+</div>
+<div class="contains">
+    <div class="wareSort clearfix">
+		<ul id="sort1"></ul>
+		<ul id="sort2" style="display: none;"></ul>
+		<ul id="sort3" style="display: none;"></ul>
+	</div>
+	<div class="selectedSort"><b>您当前选择地址是：</b><i id="selectedSort"></i></div>
+	<div class="wareSortBtn">
+		<input id="releaseBtn" type="button" value="确定" disabled="disabled" />
+	</div>
+	<script src="js/jquery.sort.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script>
+            $("#releaseBtn").click(function() {
+            $(".wareSort").slideUp(300)
+        });
+        </script>
+</div>
+</body>
+</html>

@@ -87,8 +87,8 @@
                               </div>
                               <div class="col-xs-7 ">
                                   <p class="text-right text-primary" id="product-name">沁爽柠檬三三倍酸奶</p>
-                                  <h6 class="text-right text-primary">夏日美白神器</h6>
-                                  <h6 class="text-right text-danger">￥16/盒</h6><div class="lt-rt">
+                                  <h6 class="text-right text-primary" id="product-abs">夏日美白神器</h6>
+                                  <h6 class="text-right text-danger" id="product-price">￥16/盒</h6><div class="lt-rt">
                               </div>
                             </div>
                           </div>
@@ -102,11 +102,6 @@
   			</div>
 		</div>
        <div class="product" data-toggle="modal" data-target=".modal01">
-            <div class="product_1">
-                <img src="img/test02.jpg" width="100%" height="100%">
-            </div>
-       </div>
-        <div class="product" data-toggle="modal" data-target=".modal01">
             <div class="product_1">
                 <img src="img/test02.jpg" width="100%" height="100%">
             </div>
@@ -135,21 +130,21 @@
     });
     </script>
     <script>
-		$(document).ready(function(){
+/*		$(document).ready(function(){
 			
 			var dic =[{name:'milk',abstract:'##########',price:'15'},{name:'leben',abstract:'+++++++++++',price:'16'}]	
 			$('.product').click(function() {
 				
 				index = $(this).index('.product')
-				$(".modal-body .product-name").text(dic[index].name)
+				$(".modal-body #product-name").text(dic[index].name)
 				$(".modal-body h6").text(dic[index].abstract)
 				$(".modal-body h6:last").text(dic[index].price)
 			})
+		})*/
 				
 			//var jWindow = $(window);
 			
-/*			$(window).scroll(function(){
-
+/*<!--			$(window).scroll(function(){
 				var scrollHeight = $(this).scrollTop();
 				//console.log(scrollHeight)
 				if(scrollHeight>120){
@@ -158,13 +153,20 @@
 				else{
 					$('#roll').slideDown(300)
 				}
-			})*/
+			})-->*/
 	</script>
     
     <script>
-
 		$(document).ready(function() {
           // Cache selectors for faster performance.
+          	var dic =[{name:'milk',abstract:'##########',price:'15'},{name:'leben',abstract:'+++++++++++',price:'16'}]	
+			$('.product').click(function() {
+				
+				index = $(this).index('.product')
+				$(".modal-body #product-name").text(dic[index].name)
+				$(".modal-body #product-abs").text(dic[index].abstract)
+				$(".modal-body #product-price").text(dic[index].price)
+			})
           var $window = $(window),
               $mainMenuBar = $('.product_first'),
               $mainMenuBarAnchor = $('#mainMenuBarAnchor');

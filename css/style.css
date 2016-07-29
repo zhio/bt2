@@ -3,6 +3,9 @@ body{
 	background:#ecf0f1;
 	padding-bottom:70px; 
 	}
+.pplaceholder{
+	height:61px
+	}
 .ad{
 /*    position:fixed;
 	top:61px;*/
@@ -12,7 +15,8 @@ body{
 .stick{
 		margin-top: 0;
 	    position: fixed;
-        top: 61px;}
+        top: 61px;
+		width:100%;}
 #footer{
 	height:60px;
 	background:#FFFFFF;}	
@@ -135,7 +139,6 @@ body{
 }
 .slide-link em {
     float: right;
-    margin-top: 4px;
     display: inline-block;
     font-style: normal;
     color: #999;
