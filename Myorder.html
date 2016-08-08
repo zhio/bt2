@@ -11,6 +11,7 @@
     <link href="css/style.css" rel="stylesheet">
     <link rel="stylesheet" href="css/bellows.css">
 	<link rel="stylesheet" href="css/bellows-theme.css">
+<<<<<<< HEAD
 	<link rel="stylesheet" href="css/lrtk.css"> 
   </head>
   <body>
@@ -36,6 +37,47 @@
                       <p class="pro-name">这是什么奶</p>
                       <p class="pro-person">某某某</p>
                       <p class="pro-address">兰州市安宁区西北师范大学</p>
+=======
+	<link rel="stylesheet" href="css/lrtk.css">
+  	<style>
+  	/*移到外边去，各个文件navbar要统一风格，这种适合写在统一的style.css里面*/
+	.navbar{
+		background:#FDFDFD;
+		}	
+	</style> 
+  </head>
+  <body>
+ 	<div class="bellows single">
+ 		<!-- class不能用下划线，用减号 -->
+	<div class="bellows__item">
+		<div class="bellows__header">
+			<h5>正进行</h5>
+		</div>
+		<div class="bellows__content">
+			<!-- 下划线 -->
+			            <!-- data-target最好用id -->
+
+			 <div id="order1" class="order-card product_1 " data-toggle="modal" data-target=".modal01" style="transform: rotate(-3deg);">
+			 	<!-- span不能用id吧，这个应该不止出现一次，应该用class -->
+                <p class="slide-link">订单号:<span id="order-id">123456789 </span>             <em id="order_data">2016-7-25</em></p>
+                <hr/>
+                <div class="order-card-body">
+                	<!-- 这里最好加上id，用于表意 -->
+                      <p>这是什么奶</p>
+                      <p>某某某</p>
+                      <p>兰州市安宁区西北师范大学</p>
+				</div>
+            </div>
+            <!-- data-target最好用id -->
+			 <div class="order-card product_1 " data-toggle="modal" data-target=".modal01" style="transform: rotate(3deg);">
+                <p class="slide-link">订单号:123456789              <em>2016-7-25</em></p>
+                <hr/>
+                <div class="order-card-body">
+                	<!-- 同样要加上id -->
+                      <p>这是什么奶</p>
+                      <p>某某某</p>
+                      <p>兰州市安宁区西北师范大学</p>
+>>>>>>> origin/master
 				</div>
             </div>
 		</div>
@@ -52,8 +94,14 @@
 		<div class="bellows-header">
 			<h5>待付款</h5>
 		</div>
+<<<<<<< HEAD
 		<div class="bellows-content">
 			<img src="img/oder03.jpg" width="100%" height="100%">
+=======
+		<div class="bellows__content">
+			<!-- img不要用中文名字 -->
+			<img src="img/不正常订单.jpg" width="100%" height="100%">
+>>>>>>> origin/master
 		</div>
 	</div>
 	<div class="bellows-item">
@@ -64,8 +112,13 @@
 			<img src="img/order02.jpg" width="100%" height="100%">
 		</div>
 	</div> 
+<<<<<<< HEAD
     <img src="img/myorder.png" height="250px" width="100%">
+=======
+    	<img src="img/7b43c06ed2916f50060d939fedeaeb4fbfbf138cace7-XvmX5b_fw658.png" height="250px" width="100%">
+>>>>>>> origin/master
 	</div>
+	<!-- modal如果是唯一的就用id表示 -->
     <div class="modal fade modal01" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
   			<div class="modal-dialog modal-lg">
     		<div class="modal-content">
