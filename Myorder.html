@@ -11,65 +11,60 @@
     <link href="css/style.css" rel="stylesheet">
     <link rel="stylesheet" href="css/bellows.css">
 	<link rel="stylesheet" href="css/bellows-theme.css">
-	<link rel="stylesheet" href="css/lrtk.css">
-  	<style>
-	.navbar{
-		background:#FDFDFD;
-		}	
-	</style> 
+	<link rel="stylesheet" href="css/lrtk.css"> 
   </head>
   <body>
  	<div class="bellows single">
-	<div class="bellows__item">
-		<div class="bellows__header">
+	<div class="bellows-item">
+		<div class="bellows-header">
 			<h5>正进行</h5>
 		</div>
-		<div class="bellows__content">
-			 <div id="order1" class="order-card product_1 " data-toggle="modal" data-target=".modal01" style="transform: rotate(-3deg);">
-                <p class="slide-link">订单号:<span id="order-id">123456789 </span>             <em id="order_data">2016-7-25</em></p>
+		<div class="bellows-content">
+			 <div id="order1" class="order-card product-box " data-toggle="modal" data-target=".modal01">
+                <p class="slide-link">订单号:<span class="order-id">123456789 </span>             <em class="order_data">2016-7-25</em></p>
                 <hr/>
                 <div class="order-card-body">
-                      <p>这是什么奶</p>
-                      <p>某某某</p>
-                      <p>兰州市安宁区西北师范大学</p>
+                      <p class="pro-name">这是什么奶</p>
+                      <p class="pro-person">某某某</p>
+                      <p class="pro-address">兰州市安宁区西北师范大学</p>
 				</div>
             </div>
-			 <div class="order-card product_1 " data-toggle="modal" data-target=".modal01" style="transform: rotate(3deg);">
+			 <div class="order-card product-box " data-toggle="modal" data-target=".modal01">
                 <p class="slide-link">订单号:123456789              <em>2016-7-25</em></p>
                 <hr/>
                 <div class="order-card-body">
-                      <p>这是什么奶</p>
-                      <p>某某某</p>
-                      <p>兰州市安宁区西北师范大学</p>
+                      <p class="pro-name">这是什么奶</p>
+                      <p class="pro-person">某某某</p>
+                      <p class="pro-address">兰州市安宁区西北师范大学</p>
 				</div>
             </div>
 		</div>
 	</div>
-	<div class="bellows__item">
-		<div class="bellows__header">
+	<div class="bellows-item">
+		<div class="bellows-header">
 			<h5>待继续</h5>
 		</div>
-		<div id="wait" class="bellows__content">
-			<img src="img/我不饿.jpg" width="100%" height="100%">
+		<div id="wait" class="bellows-content">
+			<img src="img/order01.jpg" width="100%" height="100%">
 		</div>
 	</div>
-	<div class="bellows__item">
-		<div class="bellows__header">
+	<div class="bellows-item">
+		<div class="bellows-header">
 			<h5>待付款</h5>
 		</div>
-		<div class="bellows__content">
-			<img src="img/不正常订单.jpg" width="100%" height="100%">
+		<div class="bellows-content">
+			<img src="img/oder03.jpg" width="100%" height="100%">
 		</div>
 	</div>
-	<div class="bellows__item">
-		<div class="bellows__header">
+	<div class="bellows-item">
+		<div class="bellows-header">
 			<h5>已完成</h5>
 		</div>
-		<div class="bellows__content">
-			<img src="img/这是个啥.jpg" width="100%" height="100%">
+		<div class="bellows-content">
+			<img src="img/order02.jpg" width="100%" height="100%">
 		</div>
 	</div> 
-    <img src="img/7b43c06ed2916f50060d939fedeaeb4fbfbf138cace7-XvmX5b_fw658.png" height="250px" width="100%">
+    <img src="img/myorder.png" height="250px" width="100%">
 	</div>
     <div class="modal fade modal01" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
   			<div class="modal-dialog modal-lg">
@@ -116,7 +111,7 @@
 	$('.bellows').bellows({
 	  singleItemOpen: true,
 	  easing: 'ease-in-out',
-	   duration: 600
+	   duration: 500
 	})
 </script>
 <script>

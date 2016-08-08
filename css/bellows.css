@@ -1,9 +1,9 @@
-.bellows__item:not(.bellows--is-open) > .bellows__content {
+.bellows-item:not(.bellows--is-open) > .bellows-content {
   display: none; }
 
-.bellows__item.bellows--is-open > .bellows__content-wrapper,
-.bellows__item.bellows--is-closing > .bellows__content-wrapper {
+.bellows-item.bellows--is-open > .bellows-content-wrapper,
+.bellows-item.bellows--is-closing > .bellows-content-wrapper {
   display: block; }
 
-.bellows__content-wrapper {
+.bellows-content-wrapper {
   display: none; }

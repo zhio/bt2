@@ -77,8 +77,18 @@
 .order-card{
 	margin: 10px;
 	background:#FFFFFF;
+	border:#D5D2D2 1px solid;
 }
 .order-card hr{
 	margin:0;}
 .order-card-body{
 	padding:10px 20px 0 20px;}
+.coupon .slide-link{
+	font-size:16px;	}
+.coupon-price
+{
+	color : #f00;
+	font-size:20px;}
+.coupon-term
+{
+	color:#939393}
