@@ -9,9 +9,7 @@
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/Myorder.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
-    <link rel="stylesheet" href="css/bellows.css">
 	<link rel="stylesheet" href="css/bellows-theme.css">
-	<link rel="stylesheet" href="css/lrtk.css"> 
   </head>
   <body>
  	<div class="bellows single">
@@ -20,7 +18,7 @@
 			<h5>正进行</h5>
 		</div>
 		<div class="bellows-content">
-			 <div id="order1" class="order-card product-box " data-toggle="modal" data-target=".modal01">
+			 <div id="goon" class="order-card product-box " data-toggle="modal" data-target=".modal01">
                 <p class="slide-link">订单号:<span class="order-id">123456789 </span>             <em class="order_data">2016-7-25</em></p>
                 <hr/>
                 <div class="order-card-body">
@@ -69,11 +67,10 @@
     <img src="img/myorder.png" height="250px" width="100%">
 
 	</div>
-	<!-- modal如果是唯一的就用id表示 -->
     <div class="modal fade modal01" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
   			<div class="modal-dialog modal-lg">
     		<div class="modal-content">
-      			<div class="modal-header">
+      			<div id="mh-style" class="modal-header">
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
                         <h4 class="modal-title" id="gridSystemModalLabel">订单详情</h4>
                       </div>
@@ -84,7 +81,7 @@
                         <p id="product-person">订奶人:###</p>
                         <p id="product-site">取奶点:##############</p>
                       </div>
-                      <div class="modal-footer">
+                      <div id="mf-style" class="modal-footer">
                       		<a href="address.html" class="btn btn-success active " role="button">修改订单</a>
                             <a href="#" id="suspend" class="btn btn-info active " data-dismiss="modal" role="button">暂停订单</a>
                       </div>
@@ -133,8 +130,8 @@
 				
 			})
 			$('#suspend').click(function() {
-				    $("#wait").replaceWith($("#order1"))
-					$("#wait").append($("#order1"))
+				    $("#wait").replaceWith($("#goon"))
+					$("#wait").append($("#goon"))
 			})
 		})
 </script>

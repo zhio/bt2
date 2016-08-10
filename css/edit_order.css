@@ -9,7 +9,7 @@ a { text-decoration: none; color: #333; }
 /*主体部分*/
 .contains { width: 100%; margin: 0 auto; }
 .orders{
-	padding:20px;}
+	padding:40px;}
 .wareSort { padding: 15px 8px 15px 7px; border: 1px solid #ddd; background-color: #f6f6f6; }
 .wareSort ul { float: left; width: 98%; padding: 10px; border: 1px solid #ddd; margin:auto; background-color: #fff; }
 .wareSort ul li a { display: block; padding-right: 25px; padding-left: 10px; border: 1px solid #fff; line-height: 28px; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; }

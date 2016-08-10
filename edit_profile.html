@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>美天优鲜配商城</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+	<link href="css/style.css" type="text/css" rel="stylesheet"/>
+    <link href="css/Myorder.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/edit_profile.css">
+  </head>
+<body>
+<div class="panel panel-default">
+  <div class="panel-body">
+      <form>
+        <div class="form-group">
+          <label for="inputPassword" class="col-sm-3 control-label">姓名：</label>
+          <div class="col-sm-9">
+                <input type="text" class="form-control OrderTimeInput" value="小明" disabled>
+          </div>
+        </div>
+        <div class="form-group">
+         <label class="col-sm-3 control-label">性别：</label>
+          <label class="radio-inline">
+            <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1"> 男
+          </label>
+          <label class="radio-inline">
+            <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"> 女
+          </label>
+        </div>
+        <div class="form-group">
+          <label for="inputPassword" class="col-sm-3 control-label">年龄：</label>
+          <div class="col-sm-9">
+                <input type="text" class="form-control OrderTimeInput" value="18" disabled>
+         </div>
+         </div>
+        <div class="form-group">
+          <label for="inputPassword" class="col-sm-3 control-label">电话号码：</label>
+          <div class="col-sm-9">
+                <input type="text" class="form-control OrderTimeInput" value="18809461488" disabled>
+         </div>
+         </div>
+        <div class="form-group">
+          <label for="inputPassword" class="col-sm-3 control-label">住宅小区：</label>
+          <div class="col-sm-9">
+                <input type="text" class="form-control OrderTimeInput" value="西北师范大学蓝天公寓" disabled>
+         </div>
+        </div>
+      	<input id="changeOrderTime" type="button" class="btn btn-default  btn-block" value="修改">
+		<button style="display:none" id="timeChangeOK" class="btn btn-default  btn-block">确定</button>
+      </form>
+     </div>
+    </div>
+
+  	<nav id="footer" class="navbar navbar-default navbar-fixed-bottom">
+    	<div class="container">
+            <div class="row">
+                <div class="col-xs-4">
+					<img src="img/icon-home01.png" class="img-responsive center-block" alt="Responsive image"></div>
+                <div class="col-xs-4">
+                	  <a href="personal.html"><img src="img/icon-me.png" class="img-responsive center-block" alt="Responsive image"></a>
+                      </div>
+                <div class="col-xs-4"><a href="shopping.html"><img src="img/icon-cart.png" class="img-responsive center-block" alt="Responsive image"></a></div>
+            </div>
+    	</div>
+      </nav>
+</body>
+  <script src="js/jquery.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+<script type="text/javascript">
+$("#changeOrderTime").click(function(){
+    $(".OrderTimeInput").removeAttr("disabled"); 
+    $("#changeOrderTime").hide();
+    $("#timeChangeOK").show();
+})
+$("#timeChangeOK").click(function(){
+	
+	
+	$("input").text(function(n,v){
+		return v;
+	})
+	$('.OrderTimeInput').attr("disabled",true); 
+    $("#changeOrderTime").show();
+    $("#timeChangeOK").hide();
+});
+</script>
+</html>
